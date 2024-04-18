@@ -1,11 +1,12 @@
 import os
 from pathlib import Path
+from django.core.management.utils import get_random_secret_key
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-&0xd@vq3%9i)yy$k@9zbqbxnh+(@=51=3^&$o81mcf&7x0zwmw'
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', get_random_secret_key())
 
 # Debug Mode: Set to False in production.
 DEBUG = True
