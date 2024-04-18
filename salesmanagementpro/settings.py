@@ -8,7 +8,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 
 # Debug Mode: Set to False in production.
-DEBUG = False
+DEBUG = True
 
 # Allowed Hosts: Add your Azure App Service domain here.
 ALLOWED_HOSTS = ['sripalpsm.azurewebsites.net']
