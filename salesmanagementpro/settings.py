@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-&0xd@vq3%9i)yy$k@9zbqbxnh+(@=51=3^&$o81mcf&7x0zwmw'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['psmsripal.azurewebsites.net']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -78,14 +78,13 @@ WSGI_APPLICATION = 'salesmanagementpro.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'sripalpsm-database',  # Replace with your actual database name
-        'USER': 'zhuxftbokl',          # Replace with your actual database username
-        'PASSWORD': 'Sreepal@2365',   # Replace with your actual database password
-        'HOST': 'sripalmysql.mysql.database.azure.com',  # Azure database host
-        'PORT': '3306',                # Default MySQL port
+        'NAME': 'property_sales_db',
+        'USER': 'root',
+        'PASSWORD': 'root',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
-
 
 
 # Password validation
