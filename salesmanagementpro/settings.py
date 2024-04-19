@@ -14,7 +14,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', generate_secret_key())
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['your_domain.azurewebsites.net', 'localhost']
+ALLOWED_HOSTS = ['psmsripal.azurewebsites.net', 'localhost']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -59,15 +59,16 @@ WSGI_APPLICATION = 'salesmanagementpro.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'sripalpsm-database',  # Replace with your actual database name
-        'USER': 'zhuxftbokl',          # Replace with your actual database username
-        'PASSWORD': 'Sreepal@2365',   # Replace with your actual database password
-        'HOST': 'sripalmysql.mysql.database.azure.com',  # Replace with your actual database host
-        'PORT': '3306',  # Default MySQL port
+        'NAME': 'sripalpsm-database',    # Replace with your actual database name
+        'USER': 'zhuxftbokl',            # Replace with your actual database username
+        'PASSWORD': 'Sreepal@2365',      # Replace with your actual database password
+        'HOST': 'sripalmysql.mysql.database.azure.com',
+        'PORT': '3306',                  # Default MySQL port
         'OPTIONS': {
             'ssl': {
-                'ca': '/path/to/ssl/certificate.pem'  # Specify the path to your SSL certificate
-            }
+                'ca': 'https://www.digicert.com/CACerts/BaltimoreCyberTrustRoot.crt.pem',  # Download from the provided link
+            },
+            'ssl-mode': 'require',
         }
     }
 }
